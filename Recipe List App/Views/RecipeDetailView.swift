@@ -22,6 +22,12 @@ struct RecipeDetailView: View {
                 Image(recipe.image)
                     .resizable()
                     .scaledToFill()
+                
+                Text(recipe.name)
+                    .fontWeight(.bold)
+                    .padding(.top, 20)
+                    .padding(.leading)
+                    .font(.largeTitle)
             
                 VStack (alignment: .leading){
                     Picker("", selection: $selectedServingSize) {
@@ -58,7 +64,6 @@ struct RecipeDetailView: View {
             
             
         }
-        .navigationBarTitle(recipe.name)
     }
 }
 
